@@ -1,3 +1,52 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
-<%= render 'book', books: @books %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h2>User info</h2>
+      <img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanBpIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--95483e56aa47809b4f3ec3f40b611700c4adaa0f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--4a929dbc7794f3c4610ba9ba5402762ad9cd1a14/default-image.jpg">
+      <table class="table">
+        <tbody>
+        <tr></tr>
+        <tr>
+          <th>name</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>introduction</th>
+          <th></th>
+        </tr>
+        </tbody>
+      </table>
+      <div class="row">
+        <a class="btn btn-outline-secondary btn-block edit_user_9008" href="/users/9008/edit">
+          <i class="fas fa-user-cog"></i>
+        </a>
+      </div>
+      <h2 class="mt-3">New book</h2>
+      <form action="/books" accept-charset="UTF-8" method="post">
+        <div class="form-control book_title" type="text" name="book[title]" id="book_title"></div>
+        <div class="form-group">
+          <label for="book_opinion"></label>
+          <textarea class="form-control book_body" name="book[body]" id="book_body"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" name="commit" value="Create Book" class="btn btn-success" data-disable-with="Create Book">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <h2>Book detail</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="/users/9008">
+                <img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanBpIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--95483e56aa47809b4f3ec3f40b611700c4adaa0f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--4a929dbc7794f3c4610ba9ba5402762ad9cd1a14/default-image.jpg"><br>               </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>
