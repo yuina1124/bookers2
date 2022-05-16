@@ -1,4 +1,18 @@
-<h2>user編集</h2>
+<h2>User info</h2>
+
+<%= form_with model: @user do |f| %>
+        <h4>Name</h4>
+        <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"Name" %>
+
+        <h4>Image</h4>
+        <%= f.file_field :profile_image, placeholder:"プロフィール画像", accept:"image/*" %>
+
+
+        <h4>Introduction</h4>
+        <%= f.text_area :body, autofocus: true, id:"Introduction", placeholder:"Introduce"  %><br>
+
+        <%= f.submit 'Update User' %>
+      <% end %>
 
 
 <%= render 'layouts/footer' %>
