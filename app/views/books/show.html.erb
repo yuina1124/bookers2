@@ -1,3 +1,5 @@
+<%= flash[:notice] = "You have updated book successfully" %>
+
 <h1>Books#show</h1>
   <%= render 'users/userinfo', user: @user %>
 
@@ -43,7 +45,6 @@
               <td><%= link_to "Edit", edit_book_path(@book) %></td>
               <td>
                 <% if @book.user == current_user %>
-                Destroy
                   <%= link_to "Destroy", book_path(@book), method: :delete %>
                 <% end %>
               </td>
