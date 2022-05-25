@@ -4,6 +4,6 @@ class Book < ApplicationRecord
 
 
   validates :title, presence: true
-  validates :body, presence: true
+  validates :body, presence: true, uniqueness: true, length: {maxmum: 200 }
 
 end
